@@ -22,6 +22,8 @@ export const Container = styled.div`
     display: flex;
     list-style: none;
     gap: 15px;
+   align-items: center;
+   justify-content: start;
 
     li {
       :hover {
