@@ -1,6 +1,17 @@
-import { Item } from "./StatisticItem.styled"
+import PropTypes from 'prop-types';
+
+import { Item, Persentage } from './StatisticItem.styled';
 
 export const StatisticItem = ({ label, percentage }) => {
-    return (<Item><span >{ label}</span>
-      <span >{percentage}</span></Item>)
-}
+  return (
+    <li>
+      <Item>{label}</Item>
+      <Persentage>{percentage}</Persentage>
+    </li>
+  );
+};
+
+StatisticItem.prototype = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+};
